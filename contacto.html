@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contacto The Evermont Hotel — Santa Cruz de Yojoa, Cortés. Reservas, eventos y consultas.">
+  <title>Contacto | The Evermont Hotel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="contact">
+<main>
+  <section class="phero">
+    <h1>Contacto</h1>
+    <p>Estamos aquí para ayudarte a planear tu estancia perfecta frente al Lago de Yojoa.</p>
+  </section>
+
+  <section class="sec reveal">
+    <div class="cg">
+      <div class="ci">
+        <div>
+          <h3>📍 Ubicación</h3>
+          <p>Carretera CA-5, Km 84<br>Frente al Lago de Yojoa<br>Santa Cruz de Yojoa, Cortés, Honduras</p>
+        </div>
+        <div>
+          <h3>📞 Teléfonos</h3>
+          <p>Recepción 24 h: +504 2550-0000<br>WhatsApp: +504 9999-0000<br>Reservas: +504 2550-0001</p>
+        </div>
+        <div>
+          <h3>✉️ Correo</h3>
+          <p>reservas@evermonthotel.com<br>info@evermonthotel.com<br>eventos@evermonthotel.com</p>
+        </div>
+        <div>
+          <h3>🕐 Horarios</h3>
+          <p>Recepción: 24 horas<br>Check-in: 15:00 · Check-out: 12:00<br>Restaurante Ámbar: 6:30 – 22:30</p>
+        </div>
+        <div class="mapbox">
+          <iframe
+            src="https://maps.google.com/maps?q=Santa+Cruz+de+Yojoa,+Cortes,+Honduras&t=&z=12&ie=UTF8&iwloc=&output=embed"
+            loading="lazy"
+            title="Mapa The Evermont Hotel"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+
+      <div>
+        <h2 style="margin-bottom:8px">Escríbenos</h2>
+        <p style="color:var(--mist);margin-bottom:24px">Te responderemos en menos de 24 horas.</p>
+        <form id="cf">
+          <label>Nombre completo<input id="cn" required placeholder="Tu nombre"></label>
+          <label>Correo electrónico<input id="ce" type="email" required placeholder="tu@email.com"></label>
+          <label class="full">Mensaje<textarea id="cm" rows="5" required placeholder="¿En qué podemos ayudarte?"></textarea></label>
+          <div class="full err" id="cer"></div>
+          <div class="full"><button class="btn full" type="submit">Enviar mensaje</button></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="band">
+    <div class="in sec reveal">
+      <h2>Preguntas frecuentes</h2>
+      <p class="lead">Todo lo que necesitas saber antes de tu llegada.</p>
+      <div id="faq">
+        <!-- filled by JS or static -->
+      </div>
+    </div>
+  </section>
+</main>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script>
+  // FAQ render
+  document.getElementById('faq').innerHTML = FAQ.map(([q, a]) =>
+    `<details><summary>${q}</summary><p>${a}</p></details>`
+  ).join('');
+</script>
+</body>
+</html>
